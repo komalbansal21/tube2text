@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tube2Text</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: black;
+            background-image: url('bg.png'); /* Replace 'background_image_url_here.jpg' with the URL or file path of your background image */
+            background-size:cover; /* Adjusts the background image to cover the entire body */
+            background-position: center; /* Centers the background image */
+            padding: 420px;
+             
+        }
+        #logo {
+            position: absolute;
+            top: 15px; /* adjust as needed */
+            left: 20px; /* adjust as needed */
+            width: 87px; /* adjust as needed */
+            height: auto; /* maintains aspect ratio */
+        }
+        #overlay {
+            position: absolute;
+            top:39%;
+            left: 14%;
+            width: 70%;
+            height: 70%;
+            background-color: rgba(29, 0, 34, 0.5); /*Adjust the transparency here (0.5 for 50% opacity)*/
+            z-index: 1; /* Ensure the overlay stays on top of other content */
+            
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: fixed;
+            top: 5%;
+            right: 20%;
+            left: 85%;
+            transition: text-shadow 0.3s ease;
+        }
+        .nav-links li {
+            margin-right: 20px;
+        }
+        .nav-links li a {
+            text-decoration: none;
+            color: rgb(203, 65, 253);
+        }
+
+        .nav-links li a:hover {
+    
+            color: #d984f5;/* Color change on hover */
+            text-decoration: underline; 
+            transform: scale(1.4);
+            text-shadow: 0 0 5px;
+            text-shadow: 0 0 10px #df51ff, 0 0 20px #ff5197, 0 0 30px #fe3aee, 0 0 40px #ff7dbe, 0 0 70px #ff52c8, 0 0 80px #f96efb, 0 0 100px #f973f2, 0 0 150px #fd70ff; /* Text shadow with glowing effect */
+        }
+.glowing {
+    color: #f1500c; /* Text color */
+    font-size: 24px; /* Font size */
+    animation: glow 1s infinite alternate; /* Animation for glowing effect */
+    cursor: pointer; /* Optional: Change cursor to pointer on hover */
+}
+.overlay-text{
+    z-index: 10;
+    position: absolute;
+}
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <img id="logo" src="logo-rbg.png" alt="Your Logo">
+        <ul class="nav-links">
+             <li><a href="#">Saved</a><i class="fab fa-Saved"></i></li>
+            <li><a href="#">Logout</a></li> <!-- Logout option -->
+        </ul>
+    </nav>
+    <div>
+        <div>
+            <div class="overlay-text">
+                <h6  class="text-orange-600">राधे-राधे</h6>
+                <h1 class="glowing"> WELCOME TO AI BLOG GENERATOR </h1>
+                <p>
+                    Let the AI to create content for you from YouTube video 
+                    So, simple copy the link of YouTube video and paste it!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="overlay"></div> <!-- Transparent overlay -->
+</body>
+</html>
