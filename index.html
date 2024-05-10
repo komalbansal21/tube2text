@@ -13,6 +13,7 @@
             background-size:cover; /* Adjusts the background image to cover the entire body */
             background-position: center; /* Centers the background image */
             padding: 420px;
+            background-repeat: no-repeat;
              
         }
         #logo {
@@ -24,12 +25,12 @@
         }
         #overlay {
             position: absolute;
-            top:39%;
-            left: 14%;
+            top:22%;
+            left: 16%;
             width: 70%;
-            height: 70%;
+            height: 80%;
             background-color: rgba(29, 0, 34, 0.5); /*Adjust the transparency here (0.5 for 50% opacity)*/
-            z-index: 1; /* Ensure the overlay stays on top of other content */
+            z-index: 0; /* Ensure the overlay stays on top of other content */
             
         }
         
@@ -65,10 +66,18 @@
     font-size: 24px; /* Font size */
     animation: glow 1s infinite alternate; /* Animation for glowing effect */
     cursor: pointer; /* Optional: Change cursor to pointer on hover */
+    text-decoration-color: #10b981;
+    text-underline-offset: 3px;
 }
 .overlay-text{
     z-index: 10;
-    position: absolute;
+    position:absolute;
+    top: 37%;
+    right: 20%;
+    left: 25%;
+    
+    
+
 }
     
     </style>
@@ -84,9 +93,9 @@
     <div>
         <div>
             <div class="overlay-text">
-                <h6  class="text-orange-600">राधे-राधे</h6>
-                <h1 class="glowing"> WELCOME TO AI BLOG GENERATOR </h1>
-                <p>
+                <h6  class="text-orange-600 ">राधे-राधे</h6>
+                <h1 class="glowing font-bold"> WELCOME TO AI BLOG GENERATOR </h1>
+                <p class="text-pretty text-orange-600 font-semibold">
                     Let the AI to create content for you from YouTube video 
                     So, simple copy the link of YouTube video and paste it!
                 </p>
